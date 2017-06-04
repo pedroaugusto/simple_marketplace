@@ -1,5 +1,6 @@
 require "simple_marketplace/version"
+require "bigdecimal"
 
 module SimpleMarketplace
-  # Your code goes here...
+  autoload :Product, 'simple_marketplace/product'
 end
