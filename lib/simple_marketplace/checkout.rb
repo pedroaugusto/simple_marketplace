@@ -3,19 +3,19 @@ module SimpleMarketplace
 
     def initialize(*promotional_rules)
       @promotional_rules = promotional_rules
-      @itens = []
+      @items = []
     end
 
     # Adds an item to the cart
     def scan(product_code)
       if (product = Product.get_by_code(product_code))
-        @itens << product
+        @items << product
       end
     end
 
     # Calculates the total with promotions applied
     def total
-      @total = @itens.map(&:price).reduce(:+)
+      @total = @items.map(&:price).reduce(:+)
       apply_promotional_rules
       @total
     end
@@ -30,7 +30,7 @@ module SimpleMarketplace
     # calls the promotional rules in order
     def apply_promotional_rules
       @promotional_rules.each do |rule|
-        @total = rule.call(@itens, @total)
+        @total = rule.call(@items, @total)
       end
     end
 
