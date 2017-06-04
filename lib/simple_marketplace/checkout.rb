@@ -25,6 +25,11 @@ module SimpleMarketplace
       "£#{'%.2f' % total}"
     end
 
+    # Restart the cart
+    def clear_items
+      @items = []
+    end
+
     private
 
     # calls the promotional rules in order
