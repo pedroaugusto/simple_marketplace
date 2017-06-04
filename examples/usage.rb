@@ -1,7 +1,6 @@
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 require "simple_marketplace"
 
-
 # Let's create some products here...
 SimpleMarketplace::Product.create(
     { code: "001", name: "Lavender Heart", price: BigDecimal.new("9.25") },
