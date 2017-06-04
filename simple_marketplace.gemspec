@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["pedro.augusto.sb@gmail.com"]
 
   spec.summary       = %q{Library to handle basic checkout cart operations.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/pedroaugustosb/simple_marketplace"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
